@@ -1,7 +1,21 @@
-document.getElementById('generate-forms-btn').addEventListener('click', generateForms);
+document.getElementById('generate-link-btn').addEventListener('click', generateLink);
 
-function generateForms() {
+function generateLink() {
   const numRoommates = document.getElementById('roommateCount').value;
+  const linkContainer = document.getElementById('link-container');
+  const link = document.createElement('a');
+  
+  link.href = "#"; // Placeholder for the real link
+  link.innerText = "Share this link with your roommates";
+  link.onclick = function() {
+    generateForms(numRoommates);
+  };
+  
+  linkContainer.innerHTML = ''; // Clear any existing links
+  linkContainer.appendChild(link);
+}
+
+function generateForms(numRoommates) {
   const formsContainer = document.getElementById('forms-container');
   formsContainer.innerHTML = ''; // Clear previous forms
 
@@ -24,9 +38,6 @@ function generateForms() {
 
 function submitForm(event, roommateNumber) {
   event.preventDefault(); // Prevent form from submitting the traditional way
-  const form = document.getElementById(`roommate-form-${roommateNumber}`);
-  console.log(`Submitting form for Roommate ${roommateNumber}`);
-  // Here, you would normally gather the data and send it to the server
-  // For example, using fetch to send a POST request
-  // fetch('your-backend-endpoint', { method: 'POST', body: new FormData(form) })
+  alert(`Form submitted for Roommate ${roommateNumber}`);
+  // Simulate form submission and result calculation
 }
