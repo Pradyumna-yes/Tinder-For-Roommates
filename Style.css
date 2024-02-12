@@ -5,8 +5,12 @@ body {
   margin: 0;
 }
 
-#forms-container {
-  margin-top: 20px;
+#roommate-selection {
+  margin-bottom: 20px;
+}
+
+#link-container {
+  margin-bottom: 20px;
 }
 
 .form-section {
@@ -17,12 +21,12 @@ body {
   margin-bottom: 10px;
 }
 
-input[type="number"] {
+input, button {
   padding: 10px;
+  margin-right: 5px;
 }
 
 button {
-  padding: 10px 15px;
   background-color: #008CBA;
   color: white;
   border: none;
