@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('https://scintillating-crumble-534fd3.netlify.app/predict', methods=['POST'])
 def predict():
     # Dummy processing logic for demonstration
     try:
