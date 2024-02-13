@@ -1,0 +1,9 @@
+# netlify.toml
+[build]
+  publish = "frontend/build" # or the folder where your built site files are located
+  command = "npm run build" # this is the build command for your frontend framework
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
