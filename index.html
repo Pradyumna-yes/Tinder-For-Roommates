@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roommate Compatibility Test</title>
-<link rel="stylesheet" href="styles.css">
+    <title>Compatibility Predictor</title>
 </head>
 <body>
-  <h1>Roommate Compatibility Test</h1>
-  <div id="roommate-selection">
-    <label for="roommateCount">Select the number of roommates:</label>
-    <input type="number" id="roommateCount" name="roommateCount" min="2" max="10" value="2">
-    <button id="generate-link-btn">Generate Link</button>
-  </div>
-  <div id="link-container"></div>
-  <div id="forms-container"></div>
+    <h2>Enter Details for Two Individuals</h2>
+    <form action="/predict" method="post">
+        <h3>Person 1</h3>
+        <label for="fruits_veggies_1">Fruits & Veggies Consumption:</label>
+        <input type="text" id="fruits_veggies_1" name="fruits_veggies_1"><br><br>
 
-  <script src="script.js"></script>
+        <label for="daily_stress_1">Daily Stress (1-5):</label>
+        <input type="text" id="daily_stress_1" name="daily_stress_1"><br><br>
+
+        <!-- Repeat for all other fields needed for Person 1 -->
+
+        <h3>Person 2</h3>
+        <label for="fruits_veggies_2">Fruits & Veggies Consumption:</label>
+        <input type="text" id="fruits_veggies_2" name="fruits_veggies_2"><br><br>
+
+        <label for="daily_stress_2">Daily Stress (1-5):</label>
+        <input type="text" id="daily_stress_2" name="daily_stress_2"><br><br>
+
+        <!-- Repeat for all other fields needed for Person 2 -->
+
+        <input type="submit" value="Predict">
+    </form>
 </body>
 </html>
